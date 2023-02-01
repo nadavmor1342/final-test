@@ -1,0 +1,72 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .button-container {
+    position: relative;
+    width: 15vh;
+    height: 10vh;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10vh;
+    overflow: hidden;
+    transition: 0.5s;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 3vh;
+  }
+  
+  .button-container button {
+    width: 101%;
+    height: 100%;
+    font-family: "Monument Extended", sans-serif;
+    font-size: 20px;
+    background: rgb(242, 163, 44);
+    -webkit-mask: url("https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/nature-sprite.png");
+    mask: url("https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/nature-sprite.png");
+    -webkit-mask-size: 2300% 100%;
+    mask-size: 2300% 100%;
+    border: none;
+    color: white;
+    cursor: pointer;
+    animation: anim2 0.7s steps(22) forwards;
+  }
+  
+  .button-container button:hover {
+    animation: anim1 0.7s steps(22) forwards;
+  }
+  
+  .mask {
+    position: absolute;
+    color: black;
+    text-align: center;
+    width: 101%;
+    font-family: "Monument Extended", sans-serif;
+    font-weight: lighter;
+    font-size: 20px;
+    margin-top: 25px;
+    overflow: hidden;
+  }
+  
+  @keyframes anim1 {
+    from {
+      -webkit-mask-position: 100% 0;
+      mask-position: 100% 0;
+    }
+    to {
+      -webkit-mask-position: 0 0;
+      mask-position: 0 0;
+    }
+  }
+  
+  @keyframes anim2 {
+    from {
+      -webkit-mask-position: 0 0;
+      mask-position: 0 0;
+    }
+    to {
+      -webkit-mask-position: 100% 0;
+      mask-position: 100% 0;
+    }
+  }
